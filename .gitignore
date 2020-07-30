@@ -6,3 +6,20 @@
 
 # Compiled Pre-Linked Libraries
 *.plx
+
+*\\create E-R diagram or details
+create 5 tables 
+customer , accinfo, cardinfo, loaninfo,empinfo
+
+customer table has 6 columns AC_NUM,CUS_NAME,BRANCH,ADDRESS,AGE,GENDER .
+accinfo table has 4 columns AC_NUM,ACC_TYPE,BRANCH,BALANCE .
+cardinfo table has 3 columns AC_NUM,CARD_TYPE,CARD_NUM .
+loaninfo table has 4 columns AC_NUM,LOAN_TYPE,INTEREST,LOAN_AMOUNT .
+empinfo table has 5 columns EMP_ID,EMP_NAME,BRANCH,SALARY,STATUS .
+here customer.ac_num is primary key 
+and all other tables column ac_num are foreign key except empinfo . e.g - accinfo.ac_num
+
+simply add the values with mentioned condition .
+--thank you
+
+
