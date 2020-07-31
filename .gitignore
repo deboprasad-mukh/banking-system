@@ -13,6 +13,7 @@ I will recomend you to import entire table not only single column values.
 *coding part using oracle sql developer --
 create table customer (
 ac_num varchar(20) primary key not null,
+cus_name varchar(20),
 BRANCH varchar(20),
 ADDRESS varchar(50),
 AGE number(10),
