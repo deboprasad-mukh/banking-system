@@ -6,3 +6,30 @@
 
 # Compiled Pre-Linked Libraries
 *.plx
+*\\ altering some tables ,set conditions, updating values,adding values
+
+by insert into we will add some values to customer table
+code :
+INSERT INTO CUSTOMER (AC_NUM, CUS_NAME, BRANCH, ADDRESS, AGE, GENDER) 
+VALUES ('09241A1256', 'Abhiram', 'patancheru', 'patancheru', 19, 'M');
+
+INSERT INTO CUSTOMER (AC_NUM, CUS_NAME, BRANCH, ADDRESS, AGE, GENDER) 
+VALUES ('09241A1257', 'Akhil Reddy', 'lb nagar', 'lb nagar', 19, 'M');
+
+INSERT INTO CUSTOMER (AC_NUM, CUS_NAME, BRANCH, ADDRESS, AGE, GENDER) 
+VALUES ('09241A1258', 'Ambedkar', 'balanagar', 'chintal', 19, 'M');
+
+INSERT INTO CUSTOMER (AC_NUM, CUS_NAME, BRANCH, ADDRESS, AGE, GENDER) 
+VALUES ('09241A1259', 'Sai Krishna', 'kukatpally', 'nizampet', 19, 'M');
+
+**\\before adding values to accinfo table make sure you have given the conditions :
+
+ALTER TABLE AccInfo
+ADD CHECK (balance>=1000);
+
+**\\ I am using update command because I've already added data in column ac_num in accinfo table:
+
+UPDATE accinfo SET acc_TYPE = 'savings' , branch= 'miyapur', balance = '5000' WHERE ac_num = '09241A1256' ;
+UPDATE accinfo SET acc_TYPE = 'savings' , branch= 'lb nagar',balance = '5500' WHERE ac_num = '09241A1257' ;
+UPDATE accinfo SET acc_TYPE = 'fixed' , branch= 'balanagar' ,balance= '4000' WHERE ac_num = '09241A1258' ;
+UPDATE accinfo SET acc_TYPE = 'savings' , branch= 'kukatpally',balance = '4500' WHERE ac_num = '09241A1259' ;
