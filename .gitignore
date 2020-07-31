@@ -6,3 +6,25 @@
 
 # Compiled Pre-Linked Libraries
 *.plx
+*\\ you can create using sql command but I've created excel file and imported into them to database thats less time consuming but I added 
+only single column values which is ac_num of every column. thats why I had to update the values of each column in each table.
+I will recomend you to import entire table not only single column values.
+
+*coding part using oracle sql developer --
+create table customer (
+ac_num varchar(20) primary key not null,
+BRANCH varchar(20),
+ADDRESS varchar(50),
+AGE number(10),
+GENDER varchar(20),
+check(GENDER in ('M','F','O'))
+);
+
+create table accinfo (
+AC_NUM varchar(20) constraint fk_d_ci references customer(ac_num),
+ACC_TYPE varchar(20),
+BRANCH varchar(20),
+BALANCE number(20) 
+
+);
+*\\same goes to 3 more table by using reference key .Here cutomer is parent table and all are child table except empinfo
